@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tim="http://services.agresso.com/TimesheetService/TimesheetV201205">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tim:GetTimesheet>
+         <!--Optional:-->
+         <tim:input>
+           <tim:DateTimeFrom>${FROM}</tim:DateTimeFrom>
+            <tim:DateTimeTo>${TO}</tim:DateTimeTo>
+            <!--Optional:-->
+            <tim:ResourceId>${USERNAME}</tim:ResourceId>
+         </tim:input>
+         <!--Optional:-->
+         <tim:credentials>
+            <!--Optional:-->
+            <tim:Username>${USERNAME}</tim:Username>
+            <!--Optional:-->
+            <tim:Client>${CLIENT}</tim:Client>
+            <!--Optional:-->
+            <tim:Password>${PASSWORD}</tim:Password>
+         </tim:credentials>
+      </tim:GetTimesheet>
+   </soapenv:Body>
+</soapenv:Envelope>
